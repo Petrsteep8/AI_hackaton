@@ -5,7 +5,7 @@ import random
 import sqlite3
 import requests
 
-from tg_bot.data import *
+from data import *
 
 load_dotenv()
 token = os.getenv('TOKEN')
@@ -82,7 +82,7 @@ def start_test(message):
     bot.send_photo(chat_id, random_picture)
     bot.send_message(
         chat_id=chat_id,
-        text=f'Привет, {name}, я Example_bot!\nПройдите опрос, чтобы я мог составить тебе полноценного AI-персонажа.'
+        text=f'Привет, {name}, я Twinny_bot!\nПройдите опрос, чтобы я мог составить тебе полноценного AI-персонажа.'
     )
     conn = sqlite3.connect("personality_test.db")
     cursor = conn.cursor()
